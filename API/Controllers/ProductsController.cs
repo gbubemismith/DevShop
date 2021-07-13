@@ -48,5 +48,27 @@ namespace API.Controllers
 
             return Ok(productToReturn);
         }
+
+        [HttpGet("brands")]
+        public async Task<IActionResult> GetProductBrands()
+        {
+            var brands = await _service.GetProductBrandsAsync();
+
+            if (brands == null)
+                return NotFound(new ApiResponse(404));
+
+            return Ok(brands);
+        }
+
+        [HttpGet("types")]
+        public async Task<IActionResult> GetProductTypes()
+        {
+            var types = await _service.GetProductTypesAsync();
+
+            if (types == null)
+                return NotFound(new ApiResponse(404));
+
+            return Ok(types);
+        }
     }
 }
