@@ -2,9 +2,9 @@
     <h5 class="my-0 font-weight-normal">Brand Name</h5>
 
     <nav class="my-2 text-align-center my-md-0 mr-md-3">
-      <a class="p-2 text-dark">Home</a>
-      <a class="p-2 text-dark">Shop</a>
-      <a class="p-2 text-dark">Contact</a>
+      <a class="p-2" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a class="p-2" routerLink="/shop" routerLinkActive="active">Shop</a>
+      <a class="p-2">Contact</a>
     </nav>
 
     <div class="d-flex align-items-center">
