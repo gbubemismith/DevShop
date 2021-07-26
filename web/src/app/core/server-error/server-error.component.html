@@ -1,3 +1,8 @@
+
 <div class="container mt-4">
-    <h1>Internal Server Error</h1>
+    <h4>Internal Server Error</h4>
+    <ng-container *ngIf="error">
+        <h5 class="text-danger">Error: {{ error.message }}</h5>
+    </ng-container>
+    <img src="/assets/images/error-500.svg" alt="">
 </div>
