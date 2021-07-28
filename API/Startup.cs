@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using API.Extensions;
 using API.Middleware;
+using Application.Queries.Handlers;
 using Infrastructure.Data;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -41,6 +44,7 @@ namespace API
             services.AddApplicationServices();
 
             services.AddAutoMapper(typeof(Startup));
+            services.AddMediatR(typeof(GetProductsHandler).GetTypeInfo().Assembly);
 
             services.AddSwaggerDocumentation();
 
