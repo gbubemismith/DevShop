@@ -12,9 +12,9 @@ export class BusyService {
   busy() {
     this.busyRequestCount++;
     this.spinnerService.show(undefined, {
-      type: 'square-loader',
+      type: 'line-spin-fade-rotating',
       bdColor: 'rgba(0, 0, 0, 0.8)',
-      color: '#3333333'
+      color: '#FFFFFF'
     });
 
   }
